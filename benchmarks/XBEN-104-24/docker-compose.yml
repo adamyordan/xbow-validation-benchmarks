@@ -1,6 +1,7 @@
 services:
   db:
     build: ./mysql
+    command: --innodb-use-native-aio=0
     expose:
       - 3306:3306
     healthcheck:
