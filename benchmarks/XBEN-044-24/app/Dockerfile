@@ -22,7 +22,7 @@ RUN chown -R appuser:appuser /var/www/html
 
 USER appuser
 
-RUN composer install 
+RUN composer install --no-audit
 
 USER root
 RUN chown -R www-data:www-data /var/www/html/vendor
